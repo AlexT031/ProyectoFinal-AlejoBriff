@@ -1,7 +1,5 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
-using static ProyectoFinal.Clase;
-
 class Program
 {
     static void Main(String[] args)
@@ -48,7 +46,7 @@ class Program
         {
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
-            cmd.CommandText = "select * from Producto SELECT * FROM ProductoVendido Select * FROM ProductoVendido A join Producto B on B.Id = A.IdProducto";
+            cmd.CommandText = "select * from Producto SELECT * FROM ProductoVendido A join Producto B on B.Id = A.IdProducto";
             var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
